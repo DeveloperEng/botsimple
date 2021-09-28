@@ -2622,6 +2622,7 @@ def setWebHook():
 
 @app.route('/',  methods=['POST'])
 def incoming():
+     return "Ошибка при регистрации бота."
   #  random.seed()
   #  current_thread.update({'id': random.randint(1,1000)})
     if not viber.verify_signature(request.get_data(), request.headers.get('X-Viber-Content-Signature')):
