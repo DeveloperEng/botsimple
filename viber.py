@@ -2609,7 +2609,7 @@ def IncomingGetClear():
         cur.close()
         conn.close()
 
-@app.route('/',  methods=['GET'])
+@app.route('/setWebHook',  methods=['GET'])
 def IncomingGet():
     state, need_hook, error = SetHooksIfNeed()
     if state:
