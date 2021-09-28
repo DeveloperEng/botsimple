@@ -2610,7 +2610,7 @@ def IncomingGetClear():
         conn.close()
 
 @app.route('/setWebHook',  methods=['GET'])
-def IncomingGet():
+def setWebHook():
 #    state, need_hook, error = SetHooksIfNeed()
 #    if state:
 #        if need_hook:
