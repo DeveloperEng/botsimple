@@ -2611,6 +2611,16 @@ def IncomingGetClear():
 
 @app.route('/setWebHook',  methods=['GET'])
 def setWebHook():
+    dict_data = dict()
+    address = request.url.replace("setWebHook", auth_token_out)
+    print(address)
+    dict_data.update({"url": address})
+
+    print(dict_data)
+
+    ret = requests.post("https://chatapi.viber.com/pa/set_webhook",
+                        data=json.dumps(dict_data).encode('utf-8'),
+                        headers={"X-Viber-Auth-Token" : auth_token_out , "Content-Type": "application/json"})
 #    state, need_hook, error = SetHooksIfNeed()
 #    if state:
 #        if need_hook:
