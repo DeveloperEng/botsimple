@@ -2618,7 +2618,7 @@ def setWebHook():
 #        else:
 #            return "Бот был зарегистрирован ранее"
 #    else:
-        return "Ошибка при регистрации бота." + error.args[0] + "\n Попробуйте вручную (см. документацию)"
+        return "Ошибка при регистрации бота."
 
 @app.route('/',  methods=['POST'])
 def incoming():
