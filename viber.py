@@ -2611,13 +2611,13 @@ def IncomingGetClear():
 
 @app.route('/setWebHook',  methods=['GET'])
 def IncomingGet():
-    state, need_hook, error = SetHooksIfNeed()
-    if state:
-        if need_hook:
-            return "Регистрация бота прошла успешно"
-        else:
-            return "Бот был зарегистрирован ранее"
-    else:
+#    state, need_hook, error = SetHooksIfNeed()
+#    if state:
+#        if need_hook:
+#            return "Регистрация бота прошла успешно"
+#        else:
+#            return "Бот был зарегистрирован ранее"
+#    else:
         return "Ошибка при регистрации бота." + error.args[0] + "\n Попробуйте вручную (см. документацию)"
 
 @app.route('/',  methods=['POST'])
